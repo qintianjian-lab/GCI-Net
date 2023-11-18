@@ -15,7 +15,7 @@
 
 
 
-![Dice&GLOPs](figure\Dice&GLOPs.jpg)
+![Dice&GLOPs](figure/Dice&GLOPs.jpg)
 
 ## Architecture overview of GCI-UNet
 
