@@ -1,0 +1,3 @@
+gci_unet_train 3d_fullres gci_unet_trainer_tumor 3 1 &&
+gci_unet_predict -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task003_tumor/imagesTs -o ~/GCI-UNet/gciunet/evaluation/gci_unet_tumor_checkpoint/inferTs1 -m 3d_fullres  -t 3 -f 1 -chk model_best -tr gci_unet_trainer_tumor &&
+gci_unet_predict -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task003_tumor/imagesTs -o ~/GCI-UNet/gciunet/evaluation/gci_unet_tumor_checkpoint/inferTs2 -m 3d_fullres  -t 3 -f 1 -chk model_final_checkpoint -tr gci_unet_trainer_tumor

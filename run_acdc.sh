@@ -1,0 +1,3 @@
+gci_unet_train 3d_fullres gci_unet_trainer_acdc 1 1&&
+gci_unet_predict -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task001_ACDC/imagesTs -o ~/GCI-UNet/gciunet/evaluation/gci_unet_acdc_checkpoint/inferTs9 -m 3d_fullres  -t 1 -f 1 -chk model_best -tr gci_unet_trainer_acdc &&
+gci_unet_predict -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task001_ACDC/imagesTs -o ~/GCI-UNet/gciunet/evaluation/gci_unet_acdc_checkpoint/inferTs10 -m 3d_fullres  -t 1 -f 1 -chk model_final_checkpoint -tr gci_unet_trainer_acdc
