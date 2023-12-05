@@ -1,6 +1,6 @@
 # Effective **G**lobal Context Integration for Lightweight 3D Medical Image Segmentation
 
-:smiley:GCI-UNet official repository: you can use to download our trained models for direct validation, all the code comes soon.
+:smiley:GCI-Net official repository: you can use to download our trained models for direct validation, all the code coming soon.
 
 <hr />
 
@@ -17,7 +17,7 @@
 
 ![Dice&GLOPs](figure/Dice&GLOPs.jpg)
 
-## Architecture overview of GCI-UNet
+## Architecture overview of GCI-Net
 
 <hr />
 
@@ -30,7 +30,7 @@ The code is tested with PyTorch 1.11.0 and CUDA 11.3.
 Please clone this repository
 
 ```
-git clone https://github.com/qintianjian-lab/GCI-UNet.git
+git clone https://github.com/qintianjian-lab/GCI-Net.git
 ```
 
 After cloning the repository, you can please follow the following two methods to install it.
@@ -127,7 +127,7 @@ gci_unet_plan_and_preprocess -t 3
 ```
 
 ## Training & Testing
-The following scripts can be used for training and testing our GCI-UNet model on the datasets:
+The following scripts can be used for training and testing our GCI-Net model on the datasets:
 
 we can change path in  `run_brats.sh` and `run_acdc.sh` 
 
@@ -165,7 +165,7 @@ DATASET/gci_unet_trained_models/gci_unet/3d_fullres/Task001_ACDC/gci_unet_traine
 
 ## Evaluation
 
-To reproduce the results of GCI-UNet: 
+To reproduce the results of GCI-Net: 
 
 We run inference to compute the Dice and HD95
 
