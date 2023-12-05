@@ -186,5 +186,5 @@ python inference_acdc.py
 <hr />
 
 ## Contact
-Should you have any question, please create an issue on this repository or contact me at qq849969741@gmail.com.
+Should you have any question, please create an issue on this repository or contact me at qiaoqiang@mail.sdu.edu.com.
 
