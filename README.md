@@ -1,6 +1,11 @@
 # Effective **G**lobal Context Integration for Lightweight 3D Medical Image Segmentation
 
-:smiley:GCI-Net official repository: you can use to download our trained models for direct validation, all the code coming soon.
+**GCI-Net official repository**
+
+## 📢 News
+
+- **[2024.9.7]** Release the network_architecture of  BraTS2021 and Lung code.
+- **[2024.4.29]** :smiley: You can use to download our trained models for direct validation, all the code coming soon.
 
 <hr />
 
@@ -9,7 +14,7 @@
 > ​	Subsequent disclosure
 <hr />
 
-## Dice & FLOPs
+## 🎨 Dice & FLOPs
 
 --------
 
@@ -23,7 +28,7 @@
 
 Subsequent disclosure
 
-## Installation
+## ⚒️ Installation
 
 The code is tested with PyTorch 1.11.0 and CUDA 11.3. 
 
@@ -62,15 +67,19 @@ pip install -e .
 
 <hr />
 
-## Dataset
+## 🏃‍♂️ Dataset
 
 #### 1. Download Dataset
 
 Datasets can be acquired via following links:
 
-**Dataset I**   **Brain_tumor** [[website](http://medicaldecathlon.com/), Google Drive, [Baidu Netdisk](https://pan.baidu.com/s/1VMc87QXoWDTJc5hZP3mAdg?pwd=as72)]
+**Dataset I**   **MSD Task-01 Brain Tumor** [[website](http://medicaldecathlon.com/), Google Drive, [Baidu Netdisk](https://pan.baidu.com/s/1VMc87QXoWDTJc5hZP3mAdg?pwd=as72)]
 
 **Dataset II**  **ACDC** [[website](https://www.creatis.insa-lyon.fr/Challenge/acdc/), [Google Drive](https://drive.google.com/file/d/1QDcEkpwH0xPs91Mny094OSA9DF8qKmM7/view?usp=drive_link), [Baidu Netdisk](https://pan.baidu.com/s/11A6pYnl_kibV_d8A8TSw4w?pwd=w8au)]
+
+**Dataset III**  **BraTS2021**
+
+**Dataset IV**  **MSD Task-06 Lung** 
 
 We use [nnFormer]([282857341/nnFormer (github.com)](https://github.com/282857341/nnFormer)) and the [UNETR++]([Amshaker/unetr_plus_plus: UNETR++: Delving into Efficient and Accurate 3D Medical Image Segmentation (github.com)](https://github.com/Amshaker/unetr_plus_plus)) repository to split the data.
 
@@ -93,6 +102,7 @@ After you have downloaded the datasets, you can follow the settings in [nnUNet](
               ├── labelsTs/
               ├── dataset.json
            ├── Task001_ACDC
+           ├── Task003_ACDC
       ├── gci_unet_cropped_data/
            ├── Task001_ACDC
            ├── Task003_tumor
@@ -121,12 +131,15 @@ After that, you can preprocess the above data using following commands:
 ```
 gci_unet_convert_decathlon_task -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task01_ACDC
 gci_unet_convert_decathlon_task -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task03_tumor
+gci_unet_convert_decathlon_task -i /srv/qiaoqiang/DATASET/gci_unet_raw/gci_unet_raw_data/Task06_Lung
 
 gci_unet_plan_and_preprocess -t 1
 gci_unet_plan_and_preprocess -t 3
+gci_unet_plan_and_preprocess -t 6
 ```
 
-## Training & Testing
+## 💃Training & Testing
+
 The following scripts can be used for training and testing our GCI-Net model on the datasets:
 
 we can change path in  `run_brats.sh` and `run_acdc.sh` 
@@ -186,5 +199,5 @@ python inference_acdc.py
 <hr />
 
 ## Contact
-Should you have any question, please create an issue on this repository or contact me at qiaoqiang@mail.sdu.edu.com.
+Should you have any question, please create an issue on this repository or contact me at qiaoqiang@mail.sdu.edu.cn.
 
